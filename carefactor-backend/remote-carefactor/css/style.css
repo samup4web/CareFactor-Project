@@ -1,0 +1,19 @@
+body {
+    background : #b3b3b3;
+    color : #171515;
+    font : small; 
+    font-family: monospace;
+    margin : 0;
+    padding : 0;
+    width: 850px;
+    margin: 0 auto;
+}
+
+
+
+#display_screen {
+    width: 850px;
+    
+    background-color: whitesmoke;
+    border: darkgray solid  1px;
+}
