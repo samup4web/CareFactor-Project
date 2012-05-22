@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/app_repeat_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="22dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_bar_repeat_bg"
+            android:drawableLeft="@drawable/ic_logo_tiny"
+            android:gravity="left|center"
+            android:textColor="#fff" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight=".14"
+            android:background="@drawable/app_bar_repeat_bg"
+            android:gravity="left|center"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text=" CareFactor"
+            android:textColor="#fff"
+            android:textSize="12sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/app_bar_repeat_bg"
+            android:gravity="right|center"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text=""
+            android:textColor="#6bff98"
+            android:textSize="12sp" >
+        </TextView>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="clip_horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_signup_user_type"
+                android:layout_marginTop="14dp"
+                android:text="Sign up for CareFactor"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/bar01_"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/welcome_text"
+                android:background="@android:drawable/divider_horizontal_bright"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/username_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_signup_username"
+                android:layout_below="@+id/bar01_"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text=" username:"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/txt_signup_username"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_signup_email"
+                android:layout_below="@+id/txt_signup_username"
+                android:layout_centerHorizontal="true"
+                android:text=" email:"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/txt_signup_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/user_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_signup_user_type"
+                android:layout_below="@+id/txt_signup_email"
+                android:layout_centerHorizontal="true"
+                android:text=" user type:"
+                android:textSize="12sp" />
+
+            <Spinner
+                android:id="@+id/txt_signup_user_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_type_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:entries="@array/usertypelist" >
+            </Spinner>
+
+            <TextView
+                android:id="@+id/password_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_signup_password"
+                android:layout_below="@+id/txt_signup_user_type"
+                android:layout_centerHorizontal="true"
+                android:text=" password:"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/txt_signup_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:password="true"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/password_text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_signup_password_2"
+                android:layout_below="@+id/txt_signup_password"
+                android:layout_centerHorizontal="true"
+                android:text=" password:"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/txt_signup_password_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password_text_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:password="true"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/signup_button"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/txt_signup_password_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="Sign up"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

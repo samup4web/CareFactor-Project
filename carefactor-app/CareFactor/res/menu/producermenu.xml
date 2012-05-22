@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/producer_menu_add_new"
+        android:title="Add New"
+        android:icon="@drawable/add_new1"/>
+    
+     <item
+        android:id="@+id/producer_menu_advertise"
+        android:title="Advertise"
+        android:icon="@drawable/advert2"/>
+    
+    <item
+        android:id="@+id/producer_menu_refresh"
+        android:title="Refresh"
+         android:icon="@drawable/ic_menu_refresh"/>
+
+    <item
+        android:id="@+id/producer_menu_logout"
+        android:title="Logout"
+         android:icon="@drawable/ic_menu_logout"/>
+    
+    <item
+        android:id="@+id/producer_menu_settings"
+        android:title="Setting"
+         android:icon="@drawable/ic_menu_settings"/>
+
+    <item
+        android:id="@+id/producer_menu_about"
+        android:title="About"
+        android:icon="@drawable/ic_menu_info_details"/>
+
+</menu>

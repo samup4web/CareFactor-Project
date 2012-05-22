@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/app_repeat_bg"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/updateFoodBankScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/welcome_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txt_new_category"
+                    android:layout_marginTop="12dp"
+                    android:text="Add new food to food bank"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/bar01_"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_below="@+id/welcome_text"
+                    android:background="@android:drawable/divider_horizontal_bright"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/new_category_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txt_new_category"
+                    android:layout_below="@+id/bar01_"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text=" Select food category:"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/txt_new_category"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/new_category_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:entries="@array/food_category" >
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/new_product_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txt_new_category"
+                    android:layout_below="@+id/txt_new_category"
+                    android:layout_centerHorizontal="true"
+                    android:text=" Food product:"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/txt_new_product_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/new_product_name_text"
+                    android:layout_centerHorizontal="true"
+                    android:inputType="textCapSentences"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:singleLine="true"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/new_decription_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txt_new_category"
+                    android:layout_below="@+id/txt_new_product_name"
+                    android:layout_centerHorizontal="true"
+                    android:text=" Description:"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/txt_new_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/new_decription_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:inputType="textCapSentences"
+                    android:layout_marginRight="20dp"
+                    android:gravity="top|left"
+                    android:lines="4"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/new_expiry_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txt_new_category"
+                    android:layout_below="@+id/txt_new_description"
+                    android:layout_centerHorizontal="true"
+                    android:text=" Expiry date:"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/txt_new_expiry_date"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/txt_new_category"
+                    android:layout_below="@+id/new_expiry_date_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="YYYY-MM-DD"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_new_change_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/new_expiry_date_text"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/txt_new_expiry_date"
+                    android:drawableLeft="@drawable/calendar_icon"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/new_available_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txt_new_category"
+                    android:layout_below="@+id/txt_new_expiry_date"
+                    android:layout_centerHorizontal="true"
+                    android:text=" Date available for pickup:"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/txt_new_available_date_1"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/txt_new_category"
+                    android:layout_below="@+id/new_available_date_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="yyyy-mm-dd"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_new_available_date_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/new_available_date_text"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/txt_new_available_date_1"
+                    android:drawableLeft="@drawable/calendar_icon"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/_to_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/btn_new_available_date_1"
+                    android:layout_below="@+id/new_available_date_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/btn_new_available_date_1"
+                    android:gravity="center"
+                    android:text=" To "
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/txt_new_available_date_2"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/new_available_date_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/_to_text"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="yyyy-mm-dd"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_new_available_date_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/new_available_date_text"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/txt_new_available_date_2"
+                    android:drawableLeft="@drawable/calendar_icon"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/text_qty_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txt_new_category"
+                    android:layout_below="@+id/txt_new_available_date_1"
+                    android:layout_centerHorizontal="true"
+                    android:text=" Avalaible quantity / weight:"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/txt_new_quantity"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/txt_new_category"
+                    android:layout_below="@+id/text_qty_info"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:text="1"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_unit"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/text_qty_info"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/txt_new_quantity"
+                    android:entries="@array/qty_weight_units"
+                    android:textSize="12sp" >
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/price_text_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txt_new_category"
+                    android:layout_below="@+id/txt_new_quantity"
+                    android:layout_centerHorizontal="true"
+                    android:text=" Price details: Price per unit (Qty / Kg /Pounds)"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txt_new_category"
+                    android:layout_below="@+id/price_text_info"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio_free"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Free"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_offer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Offer"
+                        android:textSize="12sp" />
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/txt_price"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/txt_new_category"
+                    android:layout_below="@+id/radio_group"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_currency"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/radio_group"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/txt_price"
+                    android:entries="@array/currencies"
+                    android:textSize="12sp" >
+                </Spinner>
+
+                <LinearLayout
+                    android:id="@+id/bar02"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/spinner_currency"
+                    android:background="@android:drawable/divider_horizontal_bright"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/bar02"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/custom_button"
+                    android:gravity="center"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="Submit To food bank"
+                    android:textColor="#ffffff"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/bar03"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_below="@+id/btn_submit"
+                    android:background="@android:drawable/divider_horizontal_bright"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

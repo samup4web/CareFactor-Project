@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/consumer_menu_browse"
+        android:title="Search"
+        android:icon="@drawable/ic_menu_search"/>
+    
+     <item
+        android:id="@+id/consumer_menu_request"
+        android:title="Wish list"
+        android:icon="@drawable/ic_menu_request"/>
+    
+    <item
+        android:id="@+id/consumer_menu_refresh"
+        android:title="Refresh"
+         android:icon="@drawable/ic_menu_refresh"/>
+
+    <item
+        android:id="@+id/consumer_menu_logout"
+        android:title="Logout"
+         android:icon="@drawable/ic_menu_logout"/>
+    
+    <item
+        android:id="@+id/consumer_menu_settings"
+        android:title="Setting"
+         android:icon="@drawable/ic_menu_settings"/>
+
+    <item
+        android:id="@+id/consumer_menu_about"
+        android:title="About"
+        android:icon="@drawable/ic_menu_info_details"/>
+
+</menu>

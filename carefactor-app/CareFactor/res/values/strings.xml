@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, CareFactorActivity!</string>
+    <string name="app_name">CareFactor</string>
+    <string name="usertype0">select user type</string>
+    <string name="usertype1">consumer</string>
+    <string name="usertype2">producer</string>
+
+    <string-array name="usertypelist">
+        <item>@string/usertype0</item>
+        <item>@string/usertype1</item>
+        <item>@string/usertype2</item>
+    </string-array>
+
+    <string name="food_category0">All Categories</string>
+    <string name="food_category1">Animal Products</string>
+    <string name="food_category2">Beverages</string>
+    <string name="food_category3">Fruits</string>
+    <string name="food_category4">Vegetables</string>
+    <string name="food_category5">Others</string>
+
+    <string-array name="food_category">
+        <item>@string/food_category0</item>
+        <item>@string/food_category1</item>
+        <item>@string/food_category2</item>
+        <item>@string/food_category3</item>
+        <item>@string/food_category4</item>
+        <item>@string/food_category5</item>
+    </string-array>
+    <string-array name="currencies">
+        <item>"SEK"</item>
+        <item>"USD"</item>
+        <item>"EURO"</item>
+        <item>"GBP"</item>
+        <item>"YEN"</item>
+    </string-array>
+    <string-array name="qty_weight_units">
+        <item>"Quantity"</item>
+        <item>"Kg"</item>
+        <item>"Pounds"</item>
+    </string-array>
+    <string-array name="region">
+        <item>"All Region"</item>
+        <item>"Luleå"</item>
+        <item>"Stockholm"</item>
+        <item>"Malmo"</item>
+        <item>"Vasteros"</item>
+        <item>"Umea"</item>
+    </string-array>
+    <string-array name="producer">
+        <item>"All Producer"</item>
+        <item>"demo-producer-1"</item>
+        <item>"demo-producer-2"</item>
+        <item>"demo-producer-3"</item>
+        <item>"demo-producer-4"</item>
+        <item>"demo-producer-5"</item>
+        <item>"samup4web"</item>
+    </string-array>
+   
+
+</resources>

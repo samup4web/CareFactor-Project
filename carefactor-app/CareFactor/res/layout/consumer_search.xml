@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bar01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/app_repeat_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/search_section_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_phone_no"
+        android:layout_centerHorizontal="true"
+        android:text="Search results"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/bar01"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/section_title"
+        android:layout_marginBottom="7dp"
+        android:background="@android:drawable/divider_horizontal_bright"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/app_repeat_bg"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/searchList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <SlidingDrawer
+            android:id="@+id/slidingDrawer_search_filter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:content="@+id/content"
+            android:handle="@+id/handlelayout" >
+
+            <LinearLayout
+                android:id="@+id/handlelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/handle_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/slide_btn"
+                    android:gravity="right" >
+                </Button>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#FF444444"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#FF444444"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:paddingTop="5dp" >
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@android:drawable/divider_horizontal_bright"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spnr_category"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:entries="@array/producer" />
+
+                <Spinner
+                    android:id="@+id/spnr_producers"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:entries="@array/producer" />
+
+                <Spinner
+                    android:id="@+id/spnr_regions"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:entries="@array/region" />
+
+                <TextView
+                    android:id="@+id/filter_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Sort by:"
+                    android:textColor="#000000"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/chkbox_expiry_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="Expiry Date      "
+                        android:textSize="12dp" />
+
+                    <CheckBox
+                        android:id="@+id/chkbox_producer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="Producer"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/chkbox_submitted_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="Submitted date"
+                        android:textSize="12dp" />
+
+                    <CheckBox
+                        android:id="@+id/chkbox_proximity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="Proximity"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@android:drawable/divider_horizontal_bright"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_foodbank_search"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/custom_button"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="Search"
+                    android:textColor="#ffffff"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </SlidingDrawer>
+    </FrameLayout>
+
+</LinearLayout>
